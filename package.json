@@ -1,0 +1,18 @@
+{
+    "name": "user-management-project",
+    "version": "1.0.0",
+    "description": "A simple user management project with CRUD operations and latest Cypress testing",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js",
+      "cy:test": "cypress run",
+      "cy:open": "cypress open"
+    },
+    "dependencies": {
+      "express": "^4.18.2",
+      "body-parser": "^1.20.2"
+    },
+    "devDependencies": {
+      "cypress": "^13.6.1"
+    }
+  }

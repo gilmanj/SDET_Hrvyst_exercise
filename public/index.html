@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+</head>
+<body>
+    <h1>User Management</h1>
+    <button class="createUserBtn">Add User</button>
+    <button class="getUserBtn">Get Users</button>
+    <button class="deleteUsersBtn">Delete Users</button>
+
+    <script>
+        document.getElementsByClassName('createUserBtn')[0].addEventListener('click', () => {
+            alert('Not implemented');
+        });
+
+        document.getElementsByClassName('getUserBtn')[0].addEventListener('click', () => {
+            fetch('/api/users')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Something went wrong');
+                }
+                return response.json();
+            })
+            .then(data => {
+                alert("Users" + JSON.stringify(data));
+            })     
+        });
+    </script>
+</body>
+</html>
